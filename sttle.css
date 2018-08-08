@@ -1,0 +1,21 @@
+html{
+    background-color:  rgb(93, 135, 190);
+}
+
+
+.but{
+    height: 40px;
+	background: rgb(13, 54, 107);
+	border: 3px bashed #00FF00;
+	
+	width: 150px;
+
+}
+
+.hed{
+    font-size: 40px;
+}
+
+.nice{
+    
+}
