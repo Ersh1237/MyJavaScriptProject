@@ -34,15 +34,16 @@ if (xhr.status != 200) {
       console.log(strUser);
       var chp=JSON.parse( xhr.responseText);
       for(let i=0;i<chp.articles.length;i++){
-        document.getElementById("1111").innerHTML+="<div>"+ chp.articles[i].title +"</div>";
-        document.getElementById("1111").innerHTML+="<div>"+ chp.articles[i].author +"</div>";
-        document.getElementById("1111").innerHTML+="<div>"+ chp.articles[i].source.name +"</div>";
-        document.getElementById("1111").innerHTML+="<div>"+ chp.articles[i].publishedAt +"</div>";
-        document.getElementById("1111").innerHTML+="<div>"+ chp.articles[i].description +"</div>";
-        document.getElementById("1111").innerHTML+="<div><img src="+ chp.articles[i].urlToImage +"></div>";
-           if(chp.articles[i].urlToImage==null){
-            document.getElementById("1111").innerHTML+="<div><img src='https://www.kasper.by/uploads/articles_img/1455614750714022.jpg'></div>";
-           }
+        document.getElementById("1111").innerHTML+="<div class='xp'>"+ chp.articles[i].title +"</div>";
+        document.getElementById("1111").innerHTML+="<div class='xp'>"+ chp.articles[i].author +"</div>";
+        document.getElementById("1111").innerHTML+="<div class='xp'>"+ chp.articles[i].source.name +"</div>";
+        document.getElementById("1111").innerHTML+="<div class='xp'>"+ chp.articles[i].publishedAt +"</div>";
+        document.getElementById("1111").innerHTML+="<div class='xp'>"+ chp.articles[i].description +"</div>";
+        if(chp.articles[i].urlToImage==null){
+           document.getElementById("1111").innerHTML+="<div><img class='img' src='https://www.kasper.by/uploads/articles_img/1455614750714022.jpg'></div>";
+        }else{   
+          document.getElementById("1111").innerHTML+="<div><img class='img' src="+ chp.articles[i].urlToImage +"></div>";
+        }  
         document.getElementById("1111").innerHTML+="<div><a href="+chp.articles[i].url+">"+ 'ссылка на статью' +"</a></div>";
         document.getElementById("1111").innerHTML+="<hr color=#8B4513>";
     }

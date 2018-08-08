@@ -5,17 +5,36 @@ html{
 
 .but{
     height: 40px;
-	background: rgb(13, 54, 107);
-	border: 3px bashed #00FF00;
-	
-	width: 150px;
+	background: rgba(7, 132, 204, 0.603);
+	padding: 7px 5px;
+	border:5px solid #372e69;
+    width: 150px;
+    color: white;
 
 }
 
 .hed{
     font-size: 40px;
+    color: #081168;
+  text-shadow: 2px 2px 0 #cccccc;
 }
 
 .nice{
+    padding: 7px 10px;
+  border: 5px solid #372e69;
+  background: rgba(7, 132, 204, 0.603);
+  color: white;
     
+}
+ 
+.img{
+    width: 300px;
+}
+
+.xp{
+    margin: 10px 0;
+  padding: 5px 10px;
+  border: 1px solid #372e69;
+  border-left-width: 10px;
+  color: white;
 }
