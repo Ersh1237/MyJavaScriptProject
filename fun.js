@@ -1,6 +1,6 @@
 var xhr=new XMLHttpRequest();
 xhr.open('GET','https://newsapi.org/v2/sources?apiKey=02ff9940178e4378b0ab51df370a5fd1',false);
-xhr.send();
+        xhr.send();
 // alert(xhr.status);
 //
 var fun=function (){
