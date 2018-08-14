@@ -1,0 +1,23 @@
+{
+  "name": "myjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "fun.js",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ersh1237/MyJavaScriptProject.git"
+  },
+  "author": "Egor Yarshevich",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ersh1237/MyJavaScriptProject/issues"
+  },
+  "homepage": "https://github.com/Ersh1237/MyJavaScriptProject#readme",
+  "devDependencies": {
+    "eslint": "^5.3.0"
+  }
+}
