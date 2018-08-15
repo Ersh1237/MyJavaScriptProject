@@ -38,3 +38,11 @@ html{
   border-left-width: 10px;
   color: white;
 }
+
+.xp1{
+    margin: 10px 0;
+  padding: 5px 10px;
+  border: 1px solid #372e69;
+  border-left-width: 10px;
+  
+}
