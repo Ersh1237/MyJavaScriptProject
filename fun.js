@@ -1,4 +1,5 @@
-var xhr=new XMLHttpRequest();
+var xhr=new XMLHttpRequest();// переделать через fetch
+//если выпадает ошибка, я должен вывести ошибку в поле на экране
 xhr.open('GET','https://newsapi.org/v2/sources?apiKey=02ff9940178e4378b0ab51df370a5fd1',false);
 xhr.send();
 // alert(xhr.status);
@@ -42,6 +43,7 @@ if (xhr.status != 200) {
 else {
 // вывести результат
     clickMe();
+
     //console.log(JSON.parse( xhr.responseText));
     var ger=JSON.parse( xhr.responseText);
     // console.log(ger.sources.length);
@@ -51,3 +53,4 @@ else {
     }
     
 }
+// добавить хук
