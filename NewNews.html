@@ -25,9 +25,12 @@
    <input id="126" type="text" class="xp1" maxlength="50">
    <br>
    <label>Affix image</label>
-   <input id="127" type="text" class="xp1" maxlength="30">
-   <input type="submit" value="Отправить">
+   <input id="inputFileToLoad" type="file" onchange="encodeImageFileAsURL();" />
+   <div id="imgTest"></div>
+   
+
   </form>
+  
    <br>
    <input type="button" class="but" onclick="saveFun()" value="Add News">
    <input type="button" class="but" onclick="location.href='page.html'" value="Head">

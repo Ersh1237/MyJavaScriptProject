@@ -1,5 +1,9 @@
-var obj = JSON.parse(localStorage.getItem('store'));
+var arr = JSON.parse(localStorage.getItem('store'));
 
-document.getElementById('1121').innerHTML='<div class="xp">'+ obj.tit +'</div>';
-document.getElementById('1122').innerHTML='<div class="xp">'+ obj.author +'</div>';
-document.getElementById('1123').innerHTML='<div class="xp">'+ obj.name +'</div>';   
+for(var i =0;i< arr.length;i++){
+    document.getElementById('1121').innerHTML+='<div class="xp">'+ arr[i].tit +'</div>';
+    document.getElementById('1121').innerHTML+='<div class="xp">'+ arr[i].author +'</div>';
+    document.getElementById('1121').innerHTML+='<div class="xp">'+ arr[i].name +'</div>';   
+    document.getElementById('1121').innerHTML+='<img class="img"'+ arr[i].jpgfile+'>';
+    document.getElementById('1121').innerHTML+='<hr color=#8B4513>';
+}
