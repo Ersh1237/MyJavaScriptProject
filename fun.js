@@ -1,7 +1,7 @@
 var xhr=new XMLHttpRequest();// переделать через fetch
 //если выпадает ошибка, я должен вывести ошибку в поле на экране
 xhr.open('GET','https://newsapi.org/v2/sources?apiKey=02ff9940178e4378b0ab51df370a5fd1',false);
-xhr.send();
+ xhr.send();
 // alert(xhr.status);
 //
 var fun=function (){

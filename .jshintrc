@@ -1,8 +1,0 @@
-{
-    "strict": true,
-    "undef":true,
-    "latedef": true,
-    "unusred":true,
-    "browser":true,
-    "node":true
-}
