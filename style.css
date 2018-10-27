@@ -3,6 +3,7 @@ html{
 }
 
 
+
 .but{
     height: 40px;
 	background: rgba(7, 132, 204, 0.603);
@@ -12,6 +13,8 @@ html{
     color: white;
 
 }
+
+
 
 .hed{
     font-size: 40px;

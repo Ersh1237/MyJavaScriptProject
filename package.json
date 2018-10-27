@@ -7,14 +7,10 @@
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts": "1.1.4"
-    },
+  },
   "scripts": {
-    "lint": "./node_modules/.bin/eslint",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "precommit": "lint-staged",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "eject": "react-scripts eject"
+    "lint": "./node_modules/.bin/eslint parse.js fun1.js fun.js "
+    
   },
   "repository": {
     "type": "git",
@@ -26,43 +22,15 @@
     "url": "https://github.com/Ersh1237/MyJavaScriptProject/issues"
   },
   "homepage": "https://github.com/Ersh1237/MyJavaScriptProject#readme",
-  "pre-commit": {
-    "silent": true,
-    "run": [
-      "lint"
-    ]
-  },
+  
   "devDependencies": {
     "eslint": "^5.3.0",
-    "eslint-config-prettier": "^3.0.1",
-    "eslint-plugin-prettier": "^2.6.2",
-    "husky": "^0.14.3",
-    "jshint": "^2.9.6",
-    "jshint-stylish": "^2.2.1",
-    "lint-staged": "^7.2.2",
-    "pre-commit": "^1.2.2",
-    "prettier": "^1.14.2"
+    "husky": "^1.0.0-rc.13"    
   },
-  "lint-staged": {
-    "*.{js, jsx}": [
-      "prettier --write",
-      "git add"
-    ]
-  },
-  
-  "eslint":{
-    "editor.formatOnPaste": false,
-    "editor.formatOnSave": true,
-    "[javascript]": {
-        "editor.formatOnSave": true
-    },
-    "[html]": {
-        "editor.formatOnSave": false
-    },
-    "[json]": {
-        "editor.formatOnSave": false
-    },
-    "eslint.autoFixOnSave": true,
-    "eslint.alwaysShowStatus": true
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "pre-push":"npm run lint"
+    }
   }
 }

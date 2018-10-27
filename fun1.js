@@ -3,26 +3,30 @@
 // console.log(JSON.parse(localStorage.getItem('store')));
 var saveFun = function() {
     var obj={};
-    // localStorage.setItem('title',document.getElementById('12').value);
-    // localStorage.setItem('author',document.getElementById('123').value);
-    // localStorage.setItem('name',document.getElementById('124').value);
-    // obj.tit=localStorage.getItem('title');
-    // obj.author=localStorage.getItem('author');
-    // obj.name=localStorage.getItem('name');
-    console.log(obj);
     
     obj.tit=document.getElementById('12').value;
     obj.author=document.getElementById('123').value;
     obj.name=document.getElementById('124').value;
+    obj.url=document.getElementById('125').value;
+    
+    // if(document.getElementById('125').value.indexOf('www.')!=-1&&document.getElementById('125').value.indexOf('http.')!=-1&&document.getElementById('125').value.indexOf('https.')!=-1){
+    //     obj.url=document.getElementById('125').value; 
+    // }
+    // else{
+    //     obj.url='WARNING,bad URL '+document.getElementById('125').value;
+    // }
     obj.jpgfile=document.getElementById('imgTest').innerHTML;
     
     if(JSON.parse(localStorage.getItem('store'))==null){
         var store=[];
+        obj.num=0;
         store.push(obj);
         localStorage.setItem('store',JSON.stringify(store));
+        
     }
     else{
         var store1 = JSON.parse(localStorage.getItem('store'));
+        obj.num=store1.length;
         store1.push(obj);
         localStorage.setItem('store',JSON.stringify(store1));
     }
@@ -34,7 +38,6 @@ function encodeImageFileAsURL() {
     var filesSelected = document.getElementById('inputFileToLoad').files;
     if (filesSelected.length > 0) {
         var fileToLoad = filesSelected[0];
-        console.log(fileToLoad);
         var fileReader = new FileReader();
         
         fileReader.onload = function(fileLoadedEvent) {
@@ -51,6 +54,8 @@ function encodeImageFileAsURL() {
         fileReader.readAsDataURL(fileToLoad);
     }
 }    
+
+
 
 // function clickMe(){
 //     var p=document.getElementById('1121');
